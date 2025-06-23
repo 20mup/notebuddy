@@ -1,43 +1,118 @@
-# NoteBuddy 🦷🗣️
+# 🦷 NoteBuddy — Voice-to-Note Dental Assistant
 
-NoteBuddy is a voice-to-note transcription tool designed for dentists. It allows users to record patient visit notes verbally, and it automatically transcribes and formats them into clean, professional medical documentation — saving time and reducing manual entry.
-
-This tool was created during a personal exploration into AI-powered productivity tools for healthcare. It is built with Python and integrates OpenAI's Whisper for speech-to-text and GPT-3.5 for note refinement.
-
----
-
-## 📽️ Demo
-
-▶️ [Click here to watch the demo](https://drive.google.com/file/d/1JInIiivD3RBrqDqMrg24oT3hcPp_cvXB/view)
+**NoteBuddy is a voice-activated desktop assistant built with Whisper and GPT to streamline dental note-taking.**  
+Record patient visits, and the app automatically transcribes the audio and formats it into structured dental notes — all in one click.
 
 ---
 
-## 🧠 Features
+## 📺 Demo
 
-- 🎙️ Real-time audio recording
-- 📝 Whisper-based speech transcription
-- ✨ GPT-powered note formatting and polishing
-- 💾 Save final notes for documentation or record-keeping
-- 🖥️ Lightweight and easy-to-use desktop interface
+🎥 Demo coming soon *(or link here if you have one)*
 
 ---
 
-## 🔧 Tech Stack
+## 🧠 Why I Built This
 
-- **Python 3**
-- **Whisper** — for speech-to-text
-- **OpenAI GPT-3.5** — for formatting and refining notes
-- **Tkinter** — for the simple UI
-- **SoundDevice** — for capturing microphone input
-- **dotenv** — to manage API keys securely
+Writing dental notes manually is repetitive and time-consuming. NoteBuddy solves this by:
+- Recording real-time audio during consultations
+- Transcribing speech with OpenAI Whisper
+- Structuring notes into dental fields using GPT
+
+> Built as a standalone desktop app with a simple interface — no browser, no hassle.
+
+---
+
+## ✨ Key Features
+
+✅ Voice recording from within the app  
+✅ Automatic transcription using Whisper  
+✅ GPT-3.5 formats transcription into dental note fields  
+✅ Copy formatted notes to clipboard instantly  
+✅ Lightweight desktop GUI using Tkinter  
+
+---
+
+## 🧰 Tech Stack
+
+| Component           | Tool / Library                  |
+|--------------------|---------------------------------|
+| Voice Recording     | `sounddevice`, `scipy`          |
+| Speech-to-Text      | OpenAI `Whisper`                |
+| AI Formatting       | OpenAI `GPT-3.5 Turbo`          |
+| UI                  | `tkinter` + `scrolledtext`      |
+| Environment Vars    | `python-dotenv`                 |
+| Audio Format        | `.wav` using `scipy.io.wavfile` |
+
+---
+
+## ⚙️ How It Works
+
+1. **Click “Start Recording”** to begin capturing audio  
+2. **Click “Stop Recording”** to save the recording as `recorded.wav`  
+3. **Click “Transcribe + Format with GPT”** to get dental notes structured into fields:
+   - Patient Number
+   - Chief Complaint
+   - Tooth Surface
+   - Diagnosis
+   - X-ray
+   - Treatment Plan
+   - Procedure
+   - Post-Op  
+4. **Click “Copy to Clipboard”** to paste notes into Dentrix or any system
+
+---
+
+## 📁 Project Structure
+
+\`\`\`
+notebuddy/
+├── main.py            # Main app with UI, recording, transcription, and GPT formatting
+├── .env.example       # Sample env file for OpenAI key
+├── requirements.txt   # Python dependencies
+└── README.md
+\`\`\`
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
-```bash
-git clone https://github.com/your-username/NoteBuddy.git
-cd NoteBuddy
+\`\`\`bash
+git clone https://github.com/yourusername/notebuddy.git
+cd notebuddy
+\`\`\`
 
+### 2. Create a Virtual Environment (optional but recommended)
+
+\`\`\`bash
+python -m venv venv
+source venv/bin/activate    # On Windows: venv\Scripts\activate
+\`\`\`
+
+### 3. Install Requirements
+
+\`\`\`bash
+pip install -r requirements.txt
+\`\`\`
+
+### 4. Set Up Environment Variables
+
+Create a \`.env\` file in the root directory:
+
+\`\`\`
+OPENAI_API_KEY=your-openai-key-here
+\`\`\`
+
+### 5. Run the App
+
+\`\`\`bash
+python main.py
+\`\`\`
+
+---
+
+## 📫 Contact
+
+Built with ❤️ by [Mousa Pirzada](https://www.linkedin.com/in/mousa-pirzada/)  
+Open to feedback, collaboration, and improvements.
